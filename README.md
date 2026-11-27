@@ -1,4 +1,4 @@
-# Fake News Detection – Advanced
+# Fake News Detection
 
 An NLP and Machine Learning project that analyzes news headlines and full-length articles and predicts whether they are **LIKELY REAL** or **LIKELY FAKE**.
 
