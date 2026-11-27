@@ -1,0 +1,60 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.local
+
+# Testing and coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Datasets (keep folder placeholders, ignore large data files)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/external/*
+!data/external/.gitkeep
+
+# Trained model binaries and vectorizers
+models/ml/*
+!models/ml/.gitkeep
+models/dl/*
+!models/dl/.gitkeep
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Logs and temporary outputs
+logs/*
+!logs/.gitkeep
+*.log
+
+# Generated report images (keep structure)
+reports/figures/*
+!reports/figures/.gitkeep
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

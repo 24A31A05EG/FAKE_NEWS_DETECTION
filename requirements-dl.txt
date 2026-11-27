@@ -1,0 +1,9 @@
+# ============================================================
+# FAKE_NEWS_DETECTION - Optional Deep Learning Dependencies
+# Install only when running LSTM/BiLSTM or DistilBERT comparison
+# and system resources (CPU/GPU/RAM) permit.
+# PyTorch 2.5+ supports Python 3.13 on Windows.
+# ============================================================
+
+torch>=2.5.0
+transformers>=4.46.0

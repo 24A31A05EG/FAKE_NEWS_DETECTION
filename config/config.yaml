@@ -1,0 +1,108 @@
+# ============================================================
+# FAKE_NEWS_DETECTION - Central Project Configuration
+# ============================================================
+
+project:
+  name: "FAKE_NEWS_DETECTION"
+  version: "0.1.0"
+  workspace_folder: "Fake_News_Detection_Advanced"
+  random_seed: 42
+
+paths:
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  external_data_dir: "data/external"
+  ml_models_dir: "models/ml"
+  dl_models_dir: "models/dl"
+  metrics_dir: "reports/metrics"
+  figures_dir: "reports/figures"
+  logs_dir: "logs"
+
+input_validation:
+  # Accepts short headlines, short claims, and long news articles
+  # without an arbitrary 10-word minimum.
+  min_characters: 3
+  min_words: 1
+  max_characters: 20000
+  supported_languages:
+    - "en"
+  gibberish_checks:
+    min_alpha_ratio: 0.45
+    max_repeated_char_run: 5
+    min_vowel_ratio: 0.15
+
+preprocessing:
+  lowercase: true
+  strip_html: true
+  strip_urls: true
+  strip_publisher_datelines: true
+  welfake_label_convention: "zenodo"  # "zenodo" (1=Real, 0=Fake) or "inverted" (1=Fake, 0=Real)
+
+labels:
+  positive_fake: "LIKELY FAKE"
+  positive_real: "LIKELY REAL"
+  uncertain: "UNVERIFIED"
+
+decision_thresholds:
+  # Probabilities between lower and upper bounds map to UNVERIFIED
+  # rather than forcing an overconfident guess.
+  likely_fake_min_prob: 0.65
+  likely_real_min_prob: 0.65
+
+features:
+  tfidf_word:
+    ngram_range: [1, 2]
+    max_features: 25000
+    min_df: 2
+    sublinear_tf: true
+  tfidf_char:
+    analyzer: "char_wb"
+    ngram_range: [3, 5]
+    max_features: 25000
+    min_df: 3
+    sublinear_tf: true
+
+models:
+  classical_ml:
+    - "logistic_regression"
+    - "multinomial_nb"
+    - "calibrated_linear_svm"
+    - "random_forest"
+  deep_learning:
+    enabled_if_resources_permit: true
+    candidates:
+      - "bilstm"
+      - "distilbert"
+    max_sequence_length: 256
+    batch_size: 16
+    epochs: 3
+
+evaluation:
+  test_size: 0.2
+  val_size: 0.1
+  metrics:
+    - "accuracy"
+    - "precision"
+    - "recall"
+    - "f1_score"
+    - "roc_auc"
+    - "confusion_matrix"
+
+evidence_retrieval:
+  enabled: true
+  never_fabricate_evidence: true
+  timeout_seconds: 8
+  max_results: 5
+  credible_domains:
+    - "reuters.com"
+    - "apnews.com"
+    - "bbc.com"
+    - "bbc.co.uk"
+    - "npr.org"
+    - "pbs.org"
+    - "who.int"
+    - "cdc.gov"
+    - "nasa.gov"
+    - "factcheck.org"
+    - "snopes.com"
+    - "politifact.com"

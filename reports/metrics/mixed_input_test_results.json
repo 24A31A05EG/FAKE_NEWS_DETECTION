@@ -1,0 +1,36 @@
+{
+    "headline_only": {
+        "accuracy": 0.964203,
+        "precision": 0.967176,
+        "recall": 0.954749,
+        "f1_score": 0.960922,
+        "roc_auc": 0.994291,
+        "confusion_matrix": [
+            [
+                4070,
+                116
+            ],
+            [
+                162,
+                3418
+            ]
+        ]
+    },
+    "full_article": {
+        "accuracy": 0.992016,
+        "precision": 0.992993,
+        "recall": 0.989665,
+        "f1_score": 0.991326,
+        "roc_auc": 0.999569,
+        "confusion_matrix": [
+            [
+                4161,
+                25
+            ],
+            [
+                37,
+                3543
+            ]
+        ]
+    }
+}

@@ -1,0 +1,131 @@
+{
+  "dataset_name": "isot_raw",
+  "total_rows": 44898,
+  "columns": [
+    "title",
+    "text",
+    "label",
+    "label_text",
+    "source_dataset",
+    "subject",
+    "date",
+    "clean_title",
+    "clean_text",
+    "combined_text",
+    "char_count",
+    "word_count",
+    "text_fingerprint"
+  ],
+  "missing_values": {
+    "title": {
+      "na_count": 0,
+      "blank_count": 0,
+      "na_pct": 0.0,
+      "blank_pct": 0.0
+    },
+    "text": {
+      "na_count": 0,
+      "blank_count": 631,
+      "na_pct": 0.0,
+      "blank_pct": 1.41
+    },
+    "label": {
+      "na_count": 0,
+      "blank_count": 0,
+      "na_pct": 0.0,
+      "blank_pct": 0.0
+    },
+    "label_text": {
+      "na_count": 0,
+      "blank_count": 0,
+      "na_pct": 0.0,
+      "blank_pct": 0.0
+    },
+    "source_dataset": {
+      "na_count": 0,
+      "blank_count": 0,
+      "na_pct": 0.0,
+      "blank_pct": 0.0
+    },
+    "subject": {
+      "na_count": 0,
+      "blank_count": 0,
+      "na_pct": 0.0,
+      "blank_pct": 0.0
+    },
+    "date": {
+      "na_count": 0,
+      "blank_count": 0,
+      "na_pct": 0.0,
+      "blank_pct": 0.0
+    },
+    "clean_title": {
+      "na_count": 0,
+      "blank_count": 9,
+      "na_pct": 0.0,
+      "blank_pct": 0.02
+    },
+    "clean_text": {
+      "na_count": 0,
+      "blank_count": 1418,
+      "na_pct": 0.0,
+      "blank_pct": 3.16
+    },
+    "combined_text": {
+      "na_count": 0,
+      "blank_count": 9,
+      "na_pct": 0.0,
+      "blank_pct": 0.02
+    },
+    "char_count": {
+      "na_count": 0,
+      "blank_count": 0,
+      "na_pct": 0.0,
+      "blank_pct": 0.0
+    },
+    "word_count": {
+      "na_count": 0,
+      "blank_count": 0,
+      "na_pct": 0.0,
+      "blank_pct": 0.0
+    },
+    "text_fingerprint": {
+      "na_count": 0,
+      "blank_count": 0,
+      "na_pct": 0.0,
+      "blank_pct": 0.0
+    }
+  },
+  "data_quality": {
+    "empty_combined_text_rows": 9,
+    "exact_title_text_duplicates": 5793,
+    "normalized_fingerprint_duplicates": 6070,
+    "conflicting_label_fingerprints": 0,
+    "short_inputs_under_15_words": 1044,
+    "long_articles_15_plus_words": 43845
+  },
+  "class_distribution": {
+    "REAL (0)": {
+      "count": 21417,
+      "percentage": 47.7
+    },
+    "FAKE (1)": {
+      "count": 23481,
+      "percentage": 52.3
+    }
+  },
+  "word_count_stats": {
+    "min": 0.0,
+    "median": 368.0,
+    "mean": 406.64,
+    "p95": 902.0,
+    "max": 8148.0
+  },
+  "char_count_stats": {
+    "min": 0.0,
+    "median": 2210.0,
+    "mean": 2465.29,
+    "p95": 5503.0,
+    "max": 51593.0
+  }
+}

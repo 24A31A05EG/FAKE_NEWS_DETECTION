@@ -1,0 +1,32 @@
+# ============================================================
+# FAKE_NEWS_DETECTION - Core Dependencies (Python 3.13.7 compatible)
+# ============================================================
+
+# Core scientific & tabular processing
+numpy>=2.0.0
+pandas>=2.2.0
+scipy>=1.14.0
+
+# Machine Learning & TF-IDF NLP
+scikit-learn>=1.6.0
+nltk>=3.9.0
+joblib>=1.4.0
+langdetect>=1.0.9
+
+# Visualization & Evaluation plots
+matplotlib>=3.9.0
+seaborn>=0.13.2
+
+# Web Application (Streamlit)
+streamlit>=1.40.0
+
+# Evidence Retrieval (credible source fetching/parsing)
+requests>=2.32.0
+beautifulsoup4>=4.12.3
+
+# Configuration & Environment
+PyYAML>=6.0.2
+python-dotenv>=1.0.1
+
+# Automated Testing
+pytest>=8.0.0
