@@ -2,6 +2,20 @@
 
 An NLP and Machine Learning project that analyzes news headlines and full-length articles and predicts whether they are **LIKELY REAL** or **LIKELY FAKE**.
 
+## 🚀 Live Demo
+
+**Try the deployed application:**
+
+🔗 [Fake News Detection – Live App](https://fake-news-detection-advanced.streamlit.app/)
+
+Explore the application:
+
+- **News Analyzer:** Analyze news headlines and full-length articles.
+- **Model Performance:** View model evaluation metrics.
+- **Project Information:** Explore project details and methodology.
+
+**Note:** Predictions are based on patterns learned from the ISOT dataset. They are ML-based classifications, not independent verification of news authenticity.
+
 ## Project Overview
 
 Fake News Detection is a Python-based machine learning application built using TF-IDF feature extraction and multiple classical ML algorithms.
@@ -171,7 +185,7 @@ Activate it on Windows PowerShell:
 ### 3. Install dependencies
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ### 4. Add the ISOT dataset
@@ -197,5 +211,73 @@ python -m src.models.train_mixed_input
 
 ### 7. Evaluate the models
 
+Use the evaluation scripts and reports included in the project to inspect model performance.
+
+### 8. Run the Streamlit application
+
 ```bash
-python -m src.e
+streamlit run app.py
+```
+
+Open the local URL displayed in the terminal to access the application.
+
+## Automated Testing
+
+The project includes automated tests implemented using Pytest.
+
+Run the complete test suite:
+
+```bash
+python -m pytest -v
+```
+
+The test suite covers:
+
+- Configuration loading
+- Input validation
+- Dataset loading and preprocessing
+- Duplicate detection and data splitting
+- Processed dataset artifacts
+- Trained model artifacts
+- Model predictions
+- Prediction edge cases
+
+**Latest test verification:**
+- Original project environment: 50 passed
+- Fresh GitHub clone: 48 passed, 2 skipped
+
+The two skipped tests require the ISOT processed dataset files, which are intentionally not included in the GitHub repository.
+
+## Limitations
+
+- Predictions are based on patterns learned from the ISOT dataset.
+- The application does not independently verify news against live news sources.
+- Model performance on unseen real-world news may differ from the reported test results.
+- Dataset-specific patterns and source bias may affect classification.
+- The application provides ML-based predictions, not guaranteed factual verification.
+
+## Future Enhancements
+
+- Deep Learning model integration
+- Live news source and evidence retrieval
+- Additional dataset evaluation
+- Improved multilingual news analysis
+- Explainable AI techniques
+- Advanced prediction analysis
+
+## Author
+
+**Majji Kavya**
+
+B.Tech – Computer Science and Engineering
+
+Pragati Engineering College
+
+GitHub: [24A31A05EG](https://github.com/24A31A05EG)
+
+---
+
+## Project Links
+
+- **GitHub Repository:** [FAKE_NEWS_DETECTION](https://github.com/24A31A05EG/FAKE_NEWS_DETECTION)
+- **Live Application:** [Fake News Detection – Streamlit](https://fake-news-detection-advanced.streamlit.app/)
