@@ -1,3 +1,4 @@
+
 """Tests for configuration loading and news input validation."""
 
 from __future__ import annotations
@@ -18,8 +19,9 @@ def test_load_config_branding_and_sections() -> None:
 
 def test_get_project_root_points_to_workspace() -> None:
     root = get_project_root()
-    assert root.name == "Fake_News_Detection_Advanced"
+    assert (root / "app.py").is_file()
     assert (root / "config" / "config.yaml").is_file()
+    assert (root / "src").is_dir()
 
 
 @pytest.mark.parametrize(
